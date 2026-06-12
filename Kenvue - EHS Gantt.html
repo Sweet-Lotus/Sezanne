@@ -616,7 +616,7 @@ const connectorPalette = ['#2563eb', '#dc2626', '#d97706', '#059669', '#9333ea',
 const streams = [
   { id: 1, name: 'Site Ownership & Compliance', color: 'var(--stream1)', tasks: [
     { id: 's1-1', name: 'Stakeholder meetings', start: 1, end: 2, deps: [] },
-    { id: 's1-2', name: 'Shopfloor immersion', start: 1, end: 4, deps: [] },
+    { id: 's1-2', name: 'Shopfloor immersion', start: 1, end: 3, deps: [] },
     { id: 's1-3', name: 'Kenvue standards review', start: 1, end: 4, deps: [] },
     { id: 's1-4', name: 'Legal register review', start: 2, end: 5, deps: [] },
     { id: 's1-5', name: 'ICPE compliance verification', start: 2, end: 6, deps: ['s1-4'] },
@@ -635,11 +635,11 @@ const streams = [
   ]},
   { id: 3, name: 'Machine Safety', color: 'var(--stream3)', tasks: [
     { id: 's3-1', name: 'Critical machine inventory', start: 3, end: 5, deps: ['s1-2'] },
-    { id: 's3-2', name: 'Machine safeguarding review', start: 4, end: 8, deps: ['s3-1'] },
-    { id: 's3-3', name: 'LOTO verification', start: 4, end: 8, deps: ['s3-1'] },
+    { id: 's3-2', name: 'Machine safeguarding review', start: 5, end: 7, deps: ['s3-1'] },
+    { id: 's3-3', name: 'LOTO verification', start: 5, end: 6, deps: ['s3-1'] },
     { id: 's3-4', name: 'High-risk equipment ranking', start: 8, end: 9, deps: ['s3-2', 's3-3'] },
     { id: 's3-5', name: 'Improvement roadmap', start: 9, end: 10, deps: ['s3-4'] },
-    { id: 's3-6', name: 'Engineering improvements', start: 10, end: 24, deps: ['s3-5'] }
+    { id: 's3-6', name: 'Engineering/Machine improvements', start: 10, end: 26, deps: ['s3-5'] }
   ]},
   { id: 4, name: 'People, Contractors & Safety Culture', color: 'var(--stream4)', tasks: [
     { id: 's4-1', name: 'Contractor management review', start: 3, end: 5, deps: ['s1-2'] },
@@ -651,36 +651,35 @@ const streams = [
     { id: 's4-7', name: 'Safety culture reinforcement', start: 8, end: 26, deps: ['s4-3', 's4-4', 's4-5'] }
   ]},
   { id: 5, name: 'Occupational Health & Ergonomics', color: 'var(--stream5)', tasks: [
-    { id: 's5-1', name: 'Occupational health review', start: 4, end: 6, deps: [] },
-    { id: 's5-2', name: 'Ergonomic risk mapping', start: 5, end: 9, deps: ['s5-1'] },
-    { id: 's5-3', name: 'Critical workstation assessment', start: 7, end: 10, deps: ['s5-2'] },
-    { id: 's5-4', name: 'Ergonomic improvement plan', start: 10, end: 12, deps: ['s5-3'] },
-    { id: 's5-5', name: 'Ergonomic improvements deployment', start: 12, end: 24, deps: ['s5-4'] }
+    { id: 's5-1', name: 'Occupational health review', start: 12, end: 14, deps: [] },
+    { id: 's5-2', name: 'Ergonomic risk mapping', start: 15, end: 17, deps: ['s5-1'] },
+    { id: 's5-3', name: 'Critical workstation assessment', start: 18, end: 19, deps: ['s5-2'] },
+    { id: 's5-4', name: 'Ergonomic improvement plan', start: 20, end: 22, deps: ['s5-3'] },
+    { id: 's5-5', name: 'Ergonomic improvements deployment', start: 22, end: 26, deps: ['s5-4'] }
   ]},
   { id: 6, name: 'Environment & ISO 14001', color: 'var(--stream6)', tasks: [
-    { id: 's6-1', name: 'Environmental aspects review', start: 4, end: 8, deps: ['s1-3'] },
-    { id: 's6-2', name: 'Compliance obligations review', start: 4, end: 8, deps: ['s1-4'] },
-    { id: 's6-3', name: 'Significant aspects reassessment', start: 8, end: 10, deps: ['s6-1', 's6-2'] },
-    { id: 's6-4', name: 'ISO 14001 gap assessment', start: 8, end: 10, deps: ['s6-3'] },
-    { id: 's6-5', name: 'Environmental objectives definition', start: 10, end: 12, deps: ['s6-4'] },
-    { id: 's6-6', name: 'ISO 14001 action plan', start: 12, end: 14, deps: ['s6-5'] },
-    { id: 's6-7', name: 'ISO 14001 deployment', start: 14, end: 24, deps: ['s6-6'] },
-    { id: 's6-8', name: 'Internal audit preparation', start: 20, end: 24, deps: ['s6-7'] }
+    { id: 's6-1', name: 'Environmental aspects review', start: 4, end: 7, deps: ['s1-3'] },
+    { id: 's6-2', name: 'Compliance obligations review', start: 4, end: 6, deps: ['s1-4'] },
+    { id: 's6-3', name: 'Significant aspects reassessment', start: 7, end: 8, deps: ['s6-1', 's6-2'] },
+    { id: 's6-4', name: 'ISO 14001 gap assessment', start: 8, end: 9, deps: ['s6-3'] },
+    { id: 's6-5', name: 'Environmental objectives definition', start: 9, end: 10, deps: ['s6-4'] },
+    { id: 's6-6', name: 'ISO 14001 action plan', start: 11, end: 12, deps: ['s6-5'] },
+    { id: 's6-7', name: 'ISO 14001 deployment', start: 12, end: 26, deps: ['s6-6'] },
   ]},
   { id: 7, name: 'Water Management', color: 'var(--stream7)', tasks: [
-    { id: 's7-1', name: 'Water consumption review', start: 6, end: 8, deps: ['s6-1'] },
-    { id: 's7-2', name: 'Water balance development', start: 8, end: 10, deps: ['s7-1'] },
+    { id: 's7-1', name: 'Water consumption review', start: 7, end: 9, deps: ['s6-1'] },
+    { id: 's7-2', name: 'Water deviation analysis', start: 9, end: 10, deps: ['s7-1'] },
     { id: 's7-3', name: 'Major water uses identification', start: 10, end: 11, deps: ['s7-2'] },
     { id: 's7-4', name: 'Water reduction roadmap', start: 11, end: 13, deps: ['s7-3'] },
-    { id: 's7-5', name: 'Improvement actions', start: 13, end: 24, deps: ['s7-4'] }
+    { id: 's7-5', name: 'Improvement actions', start: 13, end: 26, deps: ['s7-4'] }
   ]},
   { id: 8, name: 'Energy Management', color: 'var(--stream8)', tasks: [
     { id: 's8-1', name: 'Energy baseline review', start: 10, end: 12, deps: ['s1-2'] },
-    { id: 's8-2', name: 'Metering architecture review', start: 10, end: 13, deps: ['s8-1'] },
-    { id: 's8-3', name: 'Significant energy uses identification', start: 13, end: 15, deps: ['s8-2'] },
+    { id: 's8-2', name: 'Energy management review', start: 10, end: 12, deps: ['s8-1'] },
+    { id: 's8-3', name: 'Significant energy uses identification', start: 12, end: 15, deps: ['s8-2'] },
     { id: 's8-4', name: 'Solar performance assessment', start: 13, end: 15, deps: ['s8-2'] },
     { id: 's8-5', name: 'Energy dashboard development', start: 15, end: 18, deps: ['s8-3', 's8-4'] },
-    { id: 's8-6', name: 'Energy improvement roadmap', start: 18, end: 22, deps: ['s8-5'] }
+    { id: 's8-6', name: 'Energy improvement roadmap', start: 18, end: 26, deps: ['s8-5'] }
   ]}
 ];
 
