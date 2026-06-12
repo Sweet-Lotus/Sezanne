@@ -136,48 +136,48 @@
 let showCalcs = true;
 const data = [
   {id:uid(), name:'Waste Management & Disposal', collapsed:false, mgmt:'Environmental Excellence', items:[
-    {id:uid(), active:true, name:'Collection & Disposal (industrial waste streams)', amount:35000, calc:'Regular collection and treatment for cardboard, plastics, non-hazardous industrial waste and production residues. DREAL inspection information confirms several waste streams already managed on site, including large paper/cardboard and plastic recovery flows; the budget covers containers, transport, contractor fees, treatment and traceability.'},
-    {id:uid(), active:true, name:'Recycling Streams (segregation & recovery)', amount:10000, calc:'Supports improvement of existing segregation and recovery practices: bins, labels, collection optimization, compacting support and shopfloor communication. Built to maintain and improve 5-stream sorting and material recovery performance.'},
-    {id:uid(), active:true, name:'Hazardous Waste (small volumes / high unit cost)', amount:10000, calc:'Small hazardous volumes can carry high unit costs. Covers absorbents, oils, aerosols, contaminated packaging, chemical residues, maintenance waste and specific treatment or transport fees where applicable.'}
+    {id:uid(), active:true, name:'Collection & Disposal (industrial waste streams)', amount:35000, calc:'collection and treatment for cardboard, plastics, non-hazardous industrial waste and production residues. budget covers containers, transport, contractor fees, treatment and traceability.'},
+    {id:uid(), active:true, name:'Recycling Streams (segregation & recovery)', amount:10000, calc:' bins, labels, collection optimization, compacting support, shopfloor communication'},
+    {id:uid(), active:true, name:'Hazardous Waste (small volumes / high unit cost)', amount:10000, calc:'absorbents, oils, aerosols, contaminated packaging, chemical residues, '}
   ]},
   {id:uid(), name:'Occupational Safety', collapsed:false, mgmt:'Risk Management', items:[
-    {id:uid(), active:true, name:'PPE (site workforce)', amount:20000, calc:'200 headcount × approx. €100/year. Includes gloves, hearing protection, safety glasses, high-visibility clothing and replacement stock for manufacturing, warehouse, maintenance and support teams.'},
-    {id:uid(), active:true, name:'Safety Signage (shopfloor & warehouse)', amount:3000, calc:'Annual replacement and improvement of floor markings, pedestrian routes, warehouse signs, emergency signs, hazard pictograms and visual standards.'},
-    {id:uid(), active:true, name:'LOTO Equipment (40 machines)', amount:5000, calc:'40 manufacturing machines × approx. €125/year. Includes locks, tags, hasps, lock boxes and replacement equipment to support maintenance and intervention safety.'},
-    {id:uid(), active:true, name:'Machine Safety Improvements (guarding / interlocks)', amount:20000, calc:'Conservative improvement fund for 40 machines. Covers guarding upgrades, interlocks, minor engineering fixes, light curtains or safeguarding improvements. Machine Safety is identified as a significant H&S risk in the case study.'},
-    {id:uid(), active:true, name:'Safety Campaigns (awareness actions)', amount:3000, calc:'Monthly awareness actions, posters, safety week material, small incentives and visual communication. Used for focused topics such as slips/trips/falls, hand safety, line of fire and housekeeping.'},
-    {id:uid(), active:true, name:'Contractor Safety (orientation & permits)', amount:2000, calc:'Contractor onboarding, permit-to-work material, induction support and contractor safety communication. Important due to industrial maintenance activity and site operating rhythm.'}
+    {id:uid(), active:true, name:'PPE (site workforce)', amount:20000, calc:'200 headcount × approx €100/year. Includes gloves, hearing protection, safety glasses, high-visibility clothing and replacement stock for manufacturing, warehouse, maintenance and support teams.'},
+    {id:uid(), active:true, name:'Safety Signage (shopfloor & warehouse)', amount:3000, calc:'annual replacement/improvement of floor markings, pedestrian routes, warehouse signs, emergency signs, hazard pictograms and visual standards.'},
+    {id:uid(), active:true, name:'LOTO Equipment (40 machines)', amount:5000, calc:'40 manufacturing machines × approx €125/year. locks, tags, hasps, lock boxes, replacement equipment to support maintenance and intervention safety.'},
+    {id:uid(), active:true, name:'Machine Safety Improvements (guarding / interlocks)', amount:20000, calc:'40 manufacturing machines × approx €500/year.  guarding upgrades, interlocks, minor engineering fixes, light curtains or safeguarding improvements'},
+    {id:uid(), active:true, name:'Safety Campaigns (awareness actions)', amount:3000, calc:'monthly awareness actions, posters, safety week material, small incentives, visual communication. focus slips/trips/falls, hand/ machine safety, line of fire, housekeeping'},
+    {id:uid(), active:true, name:'Contractor Safety (orientation & permits)', amount:2000, calc:'contractor onboarding, permit-to-work material, induction support'}
   ]},
   {id:uid(), name:'Environmental Management', collapsed:false, mgmt:'Environmental Excellence', items:[
-    {id:uid(), active:true, name:'Water Monitoring (consumption tracking)', amount:5000, calc:'Supports monitoring of m³ consumption, leaks and abnormal usage. Can include submeter checks, flow verification and simple monitoring tools. Relevant because Water Stress is identified as a key environmental risk.'},
-    {id:uid(), active:true, name:'Wastewater Analysis (ICPE monitoring)', amount:8000, calc:'Laboratory analyses linked to ICPE and discharge monitoring requirements. Covers periodic sampling, lab fees and interpretation. Frequency can vary, but 4-12 campaigns/year can quickly accumulate cost.'},
-    {id:uid(), active:true, name:'Environmental Measurements (noise / emissions / monitoring)', amount:5000, calc:'Targeted measurements such as environmental noise, air emissions, dust or other monitoring needs depending on permits and operational changes.'},
-    {id:uid(), active:true, name:'ISO 14001 Readiness (gap closure support)', amount:10000, calc:'External support for ISO 14001 readiness: gap assessment, documentation support, internal audit preparation and action plan closure. Included because ISO 14001 certification readiness is a key site expectation.'},
-    {id:uid(), active:true, name:'Spill Response Equipment (kits & drain protection)', amount:5000, calc:'Absorbents, spill kits, drain covers, emergency supplies and replacement stock to strengthen operational controls and pollution prevention.'}
+    {id:uid(), active:true, name:'Water Monitoring (consumption tracking)', amount:5000, calc:'supports monitoring of m³ consumption, leaks and abnormal usage. include submeter checks, flow verification and simple monitoring tools'},
+    {id:uid(), active:true, name:'Wastewater Analysis (ICPE monitoring)', amount:8000, calc:'laboratory analyses covers periodic sampling, lab fees and interpretation, 4-12 campaigns/year'},
+    {id:uid(), active:true, name:'Environmental Measurements (noise / emissions / monitoring)', amount:5000, calc:'measurements such as environmental noise, air emissions, dust '},
+    {id:uid(), active:true, name:'ISO 14001 Readiness (gap closure support)', amount:10000, calc:'support for ISO 14001 readiness: gap assessment, documentation support, internal audit/training and action plan closure'},
+    {id:uid(), active:true, name:'Spill Response Equipment (kits & drain protection)', amount:5000, calc:'absorbents, spill kits, drain covers, emergency supplies and replacement stock '}
   ]},
   {id:uid(), name:'Training & Competency', collapsed:false, mgmt:'Compliance & People', items:[
-    {id:uid(), active:true, name:'General HSE Training (onboarding / refreshers)', amount:15000, calc:'200 headcount × approx. €75/year. Covers onboarding, annual refreshers, environmental awareness, safety fundamentals and site rules.'},
-    {id:uid(), active:true, name:'Fire Training (practical exercises)', amount:3000, calc:'External trainer and practical exercises for emergency response and first intervention awareness.'},
-    {id:uid(), active:true, name:'First Aid (renewals & new staff)', amount:4000, calc:'First-aider initial training and renewals to maintain adequate coverage across shifts and departments.'},
-    {id:uid(), active:true, name:'Forklift Training (warehouse & operators)', amount:4000, calc:'Training or refreshers for warehouse and industrial handling activities. Relevant to 2 warehouses and material flow exposure.'},
-    {id:uid(), active:true, name:'Leadership Training (supervisors)', amount:2000, calc:'Focused training for supervisors on EHS expectations, risk observation, escalation and field leadership.'}
+    {id:uid(), active:true, name:'General HSE Training (onboarding / refreshers)', amount:15000, calc:'200 headcount × approx. €75/year covers onboarding, annual refreshers, environmental awareness, safety fundamentals and site rules'},
+    {id:uid(), active:true, name:'Fire Training (practical exercises)', amount:3000, calc:'trainer and practical exercises for emergency response and first intervention awareness'},
+    {id:uid(), active:true, name:'First Aid (renewals & new staff)', amount:4000, calc:'first-aider initial training and renewals'},
+    {id:uid(), active:true, name:'Forklift Training (warehouse & operators)', amount:4000, calc:'training or refreshers for warehouse and industrial handling activities'},
+    {id:uid(), active:true, name:'Leadership Training (supervisors)', amount:2000, calc:'training for supervisors on EHS expectations, risk observation, escalation and field leadership'}
   ]},
   {id:uid(), name:'Fire Protection & Emergency Preparedness', collapsed:false, mgmt:'Risk Management', items:[
-    {id:uid(), active:true, name:'Fire Inspections (annual checks)', amount:8000, calc:'Annual checks for extinguishers, alarms, emergency lighting and fire protection equipment. Fire & Explosion is the highest business risk in the case study.'},
-    {id:uid(), active:true, name:'Fire Drills (external support)', amount:2000, calc:'Practical drills, evacuation exercises, emergency scenario preparation and debriefing support.'},
-    {id:uid(), active:true, name:'Emergency Equipment (replacement stock)', amount:5000, calc:'Emergency PPE, response material, evacuation support equipment, radios/signage where needed and replacement stock for emergency teams.'},
-    {id:uid(), active:true, name:'Fire System Maintenance (detection / alarm)', amount:10000, calc:'Preventive maintenance support for detection, alarm systems and fire protection interfaces. Does not include major CAPEX such as new sprinkler networks or fire water infrastructure.'}
+    {id:uid(), active:true, name:'Fire Inspections (annual checks)', amount:8000, calc:'annual checks for extinguishers, alarms, emergency lighting and fire protection equipment'},
+    {id:uid(), active:true, name:'Fire Drills (external support)', amount:2000, calc:'practical drills, evacuation exercises, emergency scenario preparation and debriefing support'},
+    {id:uid(), active:true, name:'Emergency Equipment (replacement stock)', amount:5000, calc:'emergency PPE, response material, evacuation support equipment, radios/signage'},
+    {id:uid(), active:true, name:'Fire System Maintenance (detection / alarm)', amount:10000, calc:'maintenance for detection, alarm systems and fire protection interfaces'}
   ]},
   {id:uid(), name:'Occupational Health', collapsed:false, mgmt:'Compliance & People', items:[
-    {id:uid(), active:true, name:'Medical Surveillance (workforce follow-up)', amount:12000, calc:'200 headcount × approx. €60/year. Occupational health follow-up, medical visits and routine surveillance needs.'},
-    {id:uid(), active:true, name:'Ergonomics (critical workstations)', amount:3000, calc:'Targeted ergonomic assessments and quick wins for manufacturing and packaging workstations. Focus on repetitive tasks, manual handling and MSD prevention.'},
-    {id:uid(), active:true, name:'Exposure Monitoring (noise / dust / chemical)', amount:5000, calc:'Noise, dust or chemical exposure assessment where relevant to manufacturing, maintenance or warehouse activities.'}
+    {id:uid(), active:true, name:'Medical Surveillance (workforce follow-up)', amount:12000, calc:'200 headcount × approx. €60/year. Health follow-up, medical visits and routine surveillance needs.'},
+    {id:uid(), active:true, name:'Ergonomics (critical workstations)', amount:3000, calc:'ergonomic assessments and quick wins for manufacturing and packaging workstations'},
+    {id:uid(), active:true, name:'Exposure Monitoring (noise / dust / chemical)', amount:5000, calc:'noise, dust or chemical exposure assessment'}
   ]},
   {id:uid(), name:'Regulatory Compliance', collapsed:false, mgmt:'Compliance & People', items:[
-    {id:uid(), active:true, name:'Regulatory Watch (French HSE subscription)', amount:3000, calc:'Typical annual subscription to a legal watch platform such as Red-on-Line, Tennaxia or Actuel HSE. Supports French HSE legal monitoring.'},
-    {id:uid(), active:true, name:'External Compliance Audit (independent check)', amount:5000, calc:'One external audit/year. Typical consultant rate €800-1,200/day over 4-5 days. Independent verification before authority or certification audits.'},
-    {id:uid(), active:true, name:'ICPE / Legal Support (expert advice)', amount:5000, calc:'Ad hoc support for permit modifications, environmental declarations, inspection preparation or interpretation of ICPE obligations.'},
-    {id:uid(), active:true, name:'Regulatory Inspection Preparation (buffer)', amount:2000, calc:'Small reserve for documentation updates, targeted measurements or specific authority requests following inspections.'}
+    {id:uid(), active:true, name:'Regulatory Watch (French HSE subscription)', amount:3000, calc:'annual subscription to Red-on-Line, Tennaxia or Actuel HSE'},
+    {id:uid(), active:true, name:'External Compliance Audit (independent check)', amount:5000, calc:'One external audit/year, typical consultant rate €800-1,200/day over 4-5 days'},
+    {id:uid(), active:true, name:'ICPE / Legal Support (expert advice)', amount:5000, calc:'support for permit modifications, environmental declarations'},
+    {id:uid(), active:true, name:'Regulatory Inspection Preparation (buffer)', amount:2000, calc:'reserve for documentation updates, targeted measurements or specific authority requests'}
   ]}
 ];
 function uid(){return Math.random().toString(36).slice(2,9)}
